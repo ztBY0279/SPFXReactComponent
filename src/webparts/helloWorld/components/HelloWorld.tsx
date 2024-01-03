@@ -4,6 +4,9 @@ import type { IHelloWorldProps } from './IHelloWorldProps';
 import { escape } from '@microsoft/sp-lodash-subset';
 import NewComponent from './NewComponent';
 import NewFunComponent from './NewFunComponent';
+//import GetData from './GetData';
+//import {NewFunComponentProps} from "./INewFunComponentProps"
+//import {SPHttpClient,SPHttpClientResponse} from "@microsoft/sp-http"
 
 export default class HelloWorld extends React.Component<IHelloWorldProps, {}> {
   public render(): React.ReactElement<IHelloWorldProps> {
@@ -13,9 +16,12 @@ export default class HelloWorld extends React.Component<IHelloWorldProps, {}> {
       environmentMessage,
       hasTeamsContext,
       userDisplayName,
+      context,
+      absoluteUrl
       
     } = this.props;
-
+   
+    
     return (
       <section className={`${styles.helloWorld} ${hasTeamsContext ? styles.teams : ''}`}>
         <div className={styles.welcome}>
@@ -40,9 +46,22 @@ export default class HelloWorld extends React.Component<IHelloWorldProps, {}> {
             <li><a href="https://aka.ms/m365pnp" target="_blank" rel="noreferrer">Microsoft 365 Developer Community</a></li>
             <li>my Name is Bharat yadav</li>
           </ul>
+          <h1>here is my context and absolute url are given below:-</h1>
+          {/* <h1>{escape(context.web)}</h1> */
+           console.log(context)
+          }
+          <h2>{escape(absoluteUrl)}</h2>
           <NewComponent/>
           <h1 style={{backgroundColor:"cyan"}}>below given the functional componet you can use now</h1>
-          <NewFunComponent/>
+          <NewFunComponent
+           name = "bharat"
+           surname='yadav'
+           Context={this.context}
+           abosoluteUrl= {absoluteUrl}
+
+          />
+          {/* <h1 style={{color:"purple"}}>GetList data is comign below</h1> */}
+          {/* <GetData/> */}
         </div>
       </section>
     );

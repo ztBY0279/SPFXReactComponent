@@ -2,6 +2,7 @@ import * as React from "react";
 
 class NewComponent extends React.Component{
 
+   
      public render():React.ReactElement<HTMLDivElement> {
         return (
             <div>

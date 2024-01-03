@@ -17,7 +17,7 @@ export interface IHelloWorldWebPartProps {
 }
 
 export default class HelloWorldWebPart extends BaseClientSideWebPart<IHelloWorldWebPartProps> {
-
+  
   private _isDarkTheme: boolean = false;
   private _environmentMessage: string = '';
 
@@ -29,13 +29,21 @@ export default class HelloWorldWebPart extends BaseClientSideWebPart<IHelloWorld
         isDarkTheme: this._isDarkTheme,
         environmentMessage: this._environmentMessage,
         hasTeamsContext: !!this.context.sdks.microsoftTeams,
-        userDisplayName: this.context.pageContext.user.displayName
+        userDisplayName: this.context.pageContext.user.displayName,
+        context:this.context,
+        absoluteUrl:this.context.pageContext.web.absoluteUrl
       },
     
     );
 
     ReactDom.render(element, this.domElement);
   }
+
+  private getListData():void{
+   // const listUrl:string = this.context.pageContext.web
+   console.log("hello world in react");
+  }
+  
 
   protected onInit(): Promise<void> {
     return this._getEnvironmentMessage().then(message => {
