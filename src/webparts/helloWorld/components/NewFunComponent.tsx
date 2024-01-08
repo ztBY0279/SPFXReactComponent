@@ -1,5 +1,6 @@
 import * as React from "react";
 import { NewFunComponentProps } from "./INewFunComponentProps";
+//import sliderStyle from "./styles/Slider.module.scss"
 
 export interface List {
   Title: string;
@@ -25,6 +26,31 @@ const arr: MyObjectType[] = [];
 function NewFunComponent(props: NewFunComponentProps): React.ReactElement<HTMLDivElement> {
   const [dataFetched, setDataFetched] = React.useState(false);
   const [count,setCount] = React.useState(0);
+
+  const imgStyle = {
+    width:"100%",
+    height:"500px"
+  }
+
+//   const arrowLeftStyle:React.CSSProperties = {
+//     position: 'absolute',
+//       top: '50%',
+//       left: 0,
+//       transform: 'translateY(-50%)',
+//       fontSize: '20px',
+//       cursor: 'pointer',
+//   }
+
+//   const arrowRightStyle:React.CSSProperties = {
+//     position: "absolute",
+//       top: "50%",
+//       right: 0,
+//       transform: "translateY(-50%)",
+//       fontSize: "20px",
+//       cursor: "pointer",
+//   }
+
+ 
 
   const endURL: string = props.abosoluteUrl + "/_api/web/lists/getbytitle('Temp1')/Items";
 
@@ -80,16 +106,15 @@ function NewFunComponent(props: NewFunComponentProps): React.ReactElement<HTMLDi
     
 
   }
+
+  
+
   return (
     <div>
       {dataFetched && (
         <>
-          <h1 style={{ color: "blue" }}>this is functional component</h1>
-          <h2 contentEditable={true} style={{ backgroundColor: "red" }}>
-            this is functional component example:
-          </h2>
-         
-          <img src={arr[count].image} alt="temp-image" width={400} height={400} />
+          <img style={imgStyle} src={arr[count].image} alt="temp-image" />
+          
           <button onClick={handleClick}>next</button>
          
         </>

@@ -11,6 +11,7 @@ import { IReadonlyTheme } from '@microsoft/sp-component-base';
 import * as strings from 'HelloWorldWebPartStrings';
 import HelloWorld from './components/HelloWorld';
 import { IHelloWorldProps } from './components/IHelloWorldProps';
+import { SPHttpClient } from '@microsoft/sp-http';
 
 export interface IHelloWorldWebPartProps {
   description: string;
@@ -31,7 +32,8 @@ export default class HelloWorldWebPart extends BaseClientSideWebPart<IHelloWorld
         hasTeamsContext: !!this.context.sdks.microsoftTeams,
         userDisplayName: this.context.pageContext.user.displayName,
         context:this.context,
-        absoluteUrl:this.context.pageContext.web.absoluteUrl
+        absoluteUrl:this.context.pageContext.web.absoluteUrl,
+        sphttpClinet:this.context.spHttpClient
       },
     
     );

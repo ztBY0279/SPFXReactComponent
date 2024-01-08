@@ -1,3 +1,4 @@
+import {SPHttpClient} from "@microsoft/sp-http"
 export  interface IHelloWorldProps {
   description: string;
   isDarkTheme: boolean;
@@ -6,4 +7,5 @@ export  interface IHelloWorldProps {
   userDisplayName: string;
   context:object;
   absoluteUrl:string;
+  sphttpClinet:SPHttpClient
 }
