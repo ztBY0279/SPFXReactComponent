@@ -58,7 +58,7 @@ async function handleSubmit(): Promise<void> {
               "Content-Type": "application/json",
               // 'Content-Type': 'application/x-www-form-urlencoded',
             },
-            body: JSON.stringify(itemData),
+            "body": JSON.stringify(itemData),
         })
         .then(response => {
             if (response.ok || (response.status >= 200 && response.status < 300)) {

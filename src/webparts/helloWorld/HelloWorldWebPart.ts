@@ -12,6 +12,7 @@ import * as strings from 'HelloWorldWebPartStrings';
 import HelloWorld from './components/HelloWorld';
 import { IHelloWorldProps } from './components/IHelloWorldProps';
 import { SPHttpClient } from '@microsoft/sp-http';
+//import SubmitDataToList from './components/CrudOperation/SubmitDataToList';
 
 export interface IHelloWorldWebPartProps {
   description: string;

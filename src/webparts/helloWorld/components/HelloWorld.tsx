@@ -11,6 +11,7 @@ import TodoList from './TodoList';
 import NewSlider from './NewSlider';
 // import { submitProps } from './SubmitProps';
 import SubmitDatawithsphttp from './SubmitDatausingsphttp';
+import SubmitDataToList from './CrudOperation/SubmitDataToList';
 
 
 export default class HelloWorld extends React.Component<IHelloWorldProps, {}> {
@@ -56,15 +57,19 @@ export default class HelloWorld extends React.Component<IHelloWorldProps, {}> {
            Context={this.context}
            abosoluteUrl= {absoluteUrl}
           />
-          <PostData/>
+          {/* <PostData/> */}
           <TodoList/>
-          <NewSlider/>
+          {/* <NewSlider/>
           <SubmitData
            absoluteUrl= {absoluteUrl}
           />
           <SubmitDatawithsphttp
             absoluteUrl={absoluteUrl}
             spHttpClient={this.props.sphttpClinet}
+          /> */}
+          <SubmitDataToList
+           absoluteUrl={this.props.absoluteUrl}
+           spHttpClient={this.props.sphttpClinet}
           />
         
           
