@@ -24,6 +24,7 @@ type MyObjectType = {
 const arr: MyObjectType[] = [];
 
 function NewFunComponent(props: NewFunComponentProps): React.ReactElement<HTMLDivElement> {
+  
   const [dataFetched, setDataFetched] = React.useState(false);
   const [count,setCount] = React.useState(0);
 

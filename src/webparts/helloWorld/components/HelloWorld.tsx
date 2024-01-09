@@ -12,7 +12,8 @@ import NewSlider from './NewSlider';
 // import { submitProps } from './SubmitProps';
 import SubmitDatawithsphttp from './SubmitDatausingsphttp';
 import SubmitDataToList from './CrudOperation/SubmitDataToList';
-
+import GetListData from './CrudOperation/GetListData';
+import Temp from './CrudOperation/Temp';
 
 export default class HelloWorld extends React.Component<IHelloWorldProps, {}> {
   public render(): React.ReactElement<IHelloWorldProps> {
@@ -71,6 +72,11 @@ export default class HelloWorld extends React.Component<IHelloWorldProps, {}> {
            absoluteUrl={this.props.absoluteUrl}
            spHttpClient={this.props.sphttpClinet}
           />
+          <GetListData
+           absoluteURL={this.props.absoluteUrl}
+           spHttpClient={this.props.sphttpClinet}
+          />
+          <Temp/>
         
           
         </div>
