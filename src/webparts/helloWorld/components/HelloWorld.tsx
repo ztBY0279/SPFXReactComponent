@@ -4,16 +4,17 @@ import type { IHelloWorldProps } from './IHelloWorldProps';
 //import { escape } from '@microsoft/sp-lodash-subset';
 //import NewComponent from './NewComponent';
 import NewFunComponent from './NewFunComponent';
-import PostData from './PostData';
+//import PostData from './PostData';
 // jsx component:-
-import SubmitData from "./SubmitData"
+//import SubmitData from "./SubmitData"
 import TodoList from './TodoList';
-import NewSlider from './NewSlider';
+//import NewSlider from './NewSlider';
 // import { submitProps } from './SubmitProps';
-import SubmitDatawithsphttp from './SubmitDatausingsphttp';
+//import SubmitDatawithsphttp from './SubmitDatausingsphttp';
 import SubmitDataToList from './CrudOperation/SubmitDataToList';
 import GetListData from './CrudOperation/GetListData';
-import Temp from './CrudOperation/Temp';
+//import Temp from './CrudOperation/Temp';
+import GetListItemById from './CrudOperation/GetListItemById';
 
 export default class HelloWorld extends React.Component<IHelloWorldProps, {}> {
   public render(): React.ReactElement<IHelloWorldProps> {
@@ -76,7 +77,11 @@ export default class HelloWorld extends React.Component<IHelloWorldProps, {}> {
            absoluteURL={this.props.absoluteUrl}
            spHttpClient={this.props.sphttpClinet}
           />
-          <Temp/>
+          {/* <Temp/> */}
+          <GetListItemById
+           absoluteURL={this.props.absoluteUrl}
+           spHttpClient={this.props.sphttpClinet}
+          />
         
           
         </div>

@@ -2,7 +2,7 @@ import * as React from "react";
 //import styles1 from "../styles/Bootstrap.module.scss";
 //import design from "../styles/Bootstrap.module.scss";
 import {SPHttpClient,SPHttpClientResponse} from "@microsoft/sp-http"
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 interface GetListDataProps{
     absoluteURL:string;
     spHttpClient:SPHttpClient

@@ -1,7 +1,7 @@
 import * as React from "react";
 import { NewFunComponentProps } from "./INewFunComponentProps";
 //import sliderStyle from "./styles/Slider.module.scss"
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 export interface List {
   Title: string;
   Name: string;
@@ -30,7 +30,8 @@ function NewFunComponent(props: NewFunComponentProps): React.ReactElement<HTMLDi
 
   const imgStyle = {
     width:"100%",
-    height:"500px"
+    height:"500px",
+    marginBottom:"10px"
   }
 
 //   const arrowLeftStyle:React.CSSProperties = {
@@ -104,19 +105,27 @@ function NewFunComponent(props: NewFunComponentProps): React.ReactElement<HTMLDi
     else{
         setCount(count+1);
     }
-    
+  }
+  function handleClickPrevious():void{
+    console.log("the count value is ",count);
+    if(count === 0){
+        setCount(arr.length-1);
+    }
+    else{
+        setCount(count-1);
+    }
 
   }
 
   
 
   return (
-    <div>
+    <div style={{marginBottom:"20px"}}>
       {dataFetched && (
         <>
           <img style={imgStyle} src={arr[count].image} alt="temp-image" />
-          
-          <button onClick={handleClick}>next</button>
+          <button  className="btn btn-primary mt-2" style={{marginRight:"35%"}} onClick={handleClickPrevious}>Previous</button>
+          <button  className="btn btn-primary mt-2" style={{marginLeft:"35%"}} onClick={handleClick}>next</button>
          
         </>
       )}
