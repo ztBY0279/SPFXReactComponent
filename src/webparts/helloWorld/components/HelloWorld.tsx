@@ -15,6 +15,7 @@ import SubmitDataToList from './CrudOperation/SubmitDataToList';
 import GetListData from './CrudOperation/GetListData';
 //import Temp from './CrudOperation/Temp';
 import GetListItemById from './CrudOperation/GetListItemById';
+import GraphApi from './CrudOperation/GraphApi';
 
 export default class HelloWorld extends React.Component<IHelloWorldProps, {}> {
   public render(): React.ReactElement<IHelloWorldProps> {
@@ -81,6 +82,13 @@ export default class HelloWorld extends React.Component<IHelloWorldProps, {}> {
           <GetListItemById
            absoluteURL={this.props.absoluteUrl}
            spHttpClient={this.props.sphttpClinet}
+          />
+
+          <h1>the graph api call is given here:</h1>
+          <GraphApi
+           msGraphClientFactory = {this.props.msGraph}
+           sphttpClient={this.props.sphttpClinet}
+
           />
         
           

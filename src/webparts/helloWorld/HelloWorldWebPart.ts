@@ -34,7 +34,8 @@ export default class HelloWorldWebPart extends BaseClientSideWebPart<IHelloWorld
         userDisplayName: this.context.pageContext.user.displayName,
         context:this.context,
         absoluteUrl:this.context.pageContext.web.absoluteUrl,
-        sphttpClinet:this.context.spHttpClient
+        sphttpClinet:this.context.spHttpClient,
+        msGraph:this.context.msGraphClientFactory
       },
     
     );

@@ -120,7 +120,7 @@ function GetListItemById(props:GetListItemByIdProps):React.ReactElement<HTMLDivE
         const header = {
             "X-HTTP-Method":"MERGE",
             "IF-MATCH": "*"
-          }
+        }
         const config:ISPHttpClientOptions = {
             "body":JSON.stringify(itemData),
             "headers":header
@@ -190,7 +190,12 @@ function GetListItemById(props:GetListItemByIdProps):React.ReactElement<HTMLDivE
 
     return (
       <div>
-        <h1>hello in get List item by id component</h1>
+        <h1  style={{
+      backgroundColor: '#007BFF', // Background color
+      color: '#FFFFFF', // Text color
+      marginTop:"5px",
+      padding: '10px', // Adjust padding for better spacing
+    }} className="display-5 mb-4 pb-2 border-bottom border-primary">Fetch data using id to update or delete</h1>
 
         <div style={{ width: "80%" }} className="form-group mb-3 mx-2">
           <label style={{ marginRight: "650px" }} className="form-label" htmlFor="exampleInputEmail1">Id </label>

@@ -14,13 +14,16 @@
     "inlineSources": false,
     "noImplicitAny": true,
     "noUnusedLocals": false,
+    "allowSyntheticDefaultImports": true,
+   
 
     "typeRoots": [
       "./node_modules/@types",
       "./node_modules/@microsoft"
     ],
     "types": [
-      "webpack-env"
+      "webpack-env",
+      "jquery"
     ],
     "lib": [
       "es5",

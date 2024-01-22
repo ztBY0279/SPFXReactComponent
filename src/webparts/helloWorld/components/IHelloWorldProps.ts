@@ -1,4 +1,5 @@
-import {SPHttpClient} from "@microsoft/sp-http"
+import {SPHttpClient,MSGraphClientFactory} from "@microsoft/sp-http"
+
 export  interface IHelloWorldProps {
   description: string;
   isDarkTheme: boolean;
@@ -8,4 +9,5 @@ export  interface IHelloWorldProps {
   context:object;
   absoluteUrl:string;
   sphttpClinet:SPHttpClient
+  msGraph:MSGraphClientFactory
 }
